@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Bootstrap | Technical Documentation Page</title>
+</head>
+
+<body>
+
+    <!-- navbar starts here -->
+    <nav id="navbar">
+        <header>Bootstrap Documentation</header>
+        <ul>
+            <li>
+                <a href="#Advantages_of_Bootstrap" class="nav-link">Advantages of Bootstrap</a>
+            </li>
+            <li>
+                <a href="#Container" class="nav-link">Container</a>
+            </li>
+            <li>
+                <a href="#Text_Settings" class="nav-link">Text Settings</a>
+            </li>
+            <li>
+                <a href="#Grid" class="nav-link">Grid</a>
+            </li>
+            <li>
+                <a href="#Bootstrap_4_vs_Bootstrap_5" class="nav-link">Bootstrap 4 vs Bootstrap 5</a>
+            </li>
+            <li>
+                <a href="#Button_Group" class="nav-link">Button Group</a>
+            </li>
+            <li>
+                <a href="#Thumbnails" class="nav-link">Thumbnails</a>
+            </li>
+            <li>
+                <a href="#Flexbox" class="nav-link">Flexbox</a>
+            </li>
+            <li>
+                <a href="#Alert" class="nav-link">Alert</a>
+            </li>
+            <li>
+                <a href="#Card" class="nav-link">Card</a>
+            </li>
+            <li>
+                <a href="#Reference" class="nav-link">Reference</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Document starts here -->
+
+    <main id="main-doc">
+        <!-- Q.1 What are the advantages of Bootstrap? -->
+        <section class="main-section" id="Advantages_of_Bootstrap">
+            <header>Advantages of Bootstrap</header>
+            <article>
+                <p>It’s responsive. Today, people are more likely to be browsing the web on a mobile phone or a tablet
+                    than
+                    on a personal computer. A responsive design will automatically resize to suit the page.</p>
+                <p>It automatically resizes images and elements. Nothing has to be handled manually by the developer —
+                    it’s all done for them.</p>
+                <ul>
+                    <li>It’s grid-based. The grid mechanic makes it much easier for developers to manage where elements
+                        show
+                        up on their site.</li>
+                    <li>It includes major components. Dropdowns, navigation bars, forms, and progress bars; it’s all
+                        designed for you. You just need to drop them in.</li>
+                    <li>It’s built on JavaScript and CSS. These are two of the most popular programming and markup
+                        languages
+                        in existence.</li>
+                    <li>It can easily be customized. Because all the code is open-source, you can do anything with it;
+                        advanced users can heavily customize the framework.</li>
+                    <li>It has a thriving community. Many people are working on improving Bootstrap and supporting other
+                        Bootstrap users.</li>
+                    <li>It has many templates. If you don’t want to design your site, you can download one of the
+                        hundreds
+                        of user-provided templates. </li>
+                </ul>
+                <p>In order to activate the Bootstrap, First method is, we can add the &lt;link&gt; in the &lt;head&gt;
+                    part and &lt;script&gt; in the &lt;body&gt; part of the program as mentioned below OR we can locally
+                    download the
+                    Bootstrap.</p>
+                <code class="text-white text-opacity-75">
+                &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"&gt;<br><br>
+                &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"&gt;&lt;&frasl;script&gt;
+            </code>
+            </article>
+        </section>
+
+        <!-- Q.2 What is a Bootstrap container, and how does it work?  -->
+
+        <section class="main-section" id="Container">
+            <header>Container</header>
+            <article>
+                <p>Bootstrap Containers are very essential and basic building blocks of bootstrap that wrap a page’s
+                    content. It’s responsible for setting and aligning content within it according to viewport or given
+                    device. Containers are defined within the container class (.container). In other words, we can say
+                    that containers are established with the width for the layout to give the content. Elements and
+                    content are added within the container.While containers can be nested, most layouts do not require a
+                    nested container.</p>
+                <p>Containers are used for many purposes such as –</p>
+                <ul>
+                    <li>It requires use with the default grid system.</li>
+                    <li>To establish width of the layout to give web content.</li>
+                    <li>To provide responsive fixed behavior of any web project.</li>
+                    <li>To set the content margin dealing with the responsive behavior of your layout.</li>
+                </ul>
+                <p>There are two container classes in Bootstrap-</p>
+                <ol type="1">
+                    <li><b>Container:</b> The default container uses <strong>‘.container’</strong> class. It provides a
+                        responsive fixed-width
+                        container.
+                        <code class="text-white text-opacity-75">
+                            &lt;div class="container"&gt;<br>&lt;-- Content here --&gt;<br>&lt;&frasl;div&gt; 
+                        </code>
+                    </li>
+                    <li><b>Responsive Container:</b> Responsive containers are responsive in nature. Responsive
+                        containers allow
+                        you to specify a class that is wide until the specified breakpoint is reached, after which we
+                        apply <strong>max-width</strong> for each of the higher breakpoints.
+                        <code class="text-white text-opacity-75">
+                            &lt;div class="container-sm"&gt;100% wide until small breakpoint&lt;&frasl;div&gt;<br>
+                            &lt;div class="container-md"&gt;100% wide until medium breakpoint&lt;&frasl;div&gt;<br>
+                            &lt;div class="container-lg"&gt;100% wide until large breakpoint&lt;&frasl;div&gt;<br>
+                            &lt;div class="container-xl"&gt;100% wide until extra large breakpoint&lt;&frasl;div&gt;<br>
+                            &lt;div class="container-xxl"&gt;100% wide until extra extra large breakpoint&lt;&frasl;div&gt;<br>
+                        </code>
+                    </li>
+                    <li><b>Container-Fluid:</b> which is <strong>width: 100%</strong> at all breakpoints
+                        <code class="text-white text-opacity-75">
+                        &lt;div class="container-fluid"&gt;<br>&lt;-- Content here --&gt;<br>&lt;&frasl;div&gt;
+                    </code>
+                    </li>
+                </ol>
+            </article>
+        </section>
+
+        <!-- Q.3 What are the default Bootstrap text settings? -->
+
+        <section class="main-section" id="Text_Settings">
+            <header>Text Settings</header>
+            <article>
+                <p>The default text settings in Bootstrap are as follows-</p>
+                <ol type="1">
+                    <li><b>Text alignment:</b> Easily realign text to components with text alignment classes. For start,
+                        end, and center alignment, responsive classes are available that use the same viewport width
+                        breakpoints as the grid system. The default text alignment in Bootstrap is left-aligned.
+                        <code class="text-white text-opacity-75">
+                            &lt;p class="text-start"&gt;Start aligned content&lt;&frasl;p&gt;<br><br>
+                            <p class="text-start">Start aligned content</p><br>
+                            &lt;p class="text-center"&gt;Center aligned content&lt;&frasl;p&gt;<br><br>                    
+                            <p class="text-center">Center aligned content</p><br>
+                            &lt;p class="text-end"&gt;End aligned content&lt;&frasl;p&gt;<br><br>                        
+                            <p class="text-end">End aligned content</p><br>
+                            &lt;p class="text-sm-start"&gt;Start aligned content on viewports sized SM (small) or wider.&lt;&frasl;p&gt;<br><br>                        
+                            <p class="text-sm-start">Start aligned content on viewports sized SM (small) or wider.</p><br>
+                            &lt;p class="text-md-start"&gt;Start aligned content on viewports sized MD (medium) or wider.&lt;&frasl;p&gt;<br><br>
+                            <p class="text-md-start">Start aligned content on viewports sized MD (medium) or wider.</p><br>
+                            &lt;p class="text-lg-start"&gt;Start aligned content on viewports sized LG (large) or wider.&lt;&frasl;p&gt;<br><br>
+                            <p class="text-lg-start">Start aligned content on viewports sized LG (large) or wider.</p><br>
+                            &lt;p class="text-xl-start"&gt;Start aligned content on viewports sized XL (extra-large) or wider.&lt;&frasl;p&gt;<br><br>
+                            <p class="text-xl-start">Start aligned content on viewports sized XL (extra-large) or wider.</p>
+                        </code>
+                    </li>
+
+                    <li><b>Text wrapping and overflow:</b> Wrap text with a <strong>.text-wrap class.</strong> and for
+                        overflowing or to prevent text from wrapping apply <strong>.text-nowrap</strong> class.
+                        <code class="text-white text-opacity-75">
+                            &lt;div class="badge bg-primary text-wrap text-start" style="width: 6rem"&gt;This text would wrap.&lt;&frasl;div&gt;<br><br>
+                            <div class="badge bg-primary text-wrap text-start" style="width: 6rem;">
+                                This text would wrap.
+                              </div><br><br>
+
+                            &lt;div class="badge text-nowrap bg-primary border" style="width: 8rem"&gt;This text would overflow the parent.&lt;&frasl;div&gt;<br><br>
+                            <div class="badge text-nowrap bg-primary border" style="width: 8rem;">
+                                This text would overflow the parent.
+                            </div>
+                        </code>
+                    </li>
+
+                    <li><b>Text transform:</b> Transform text in components with text capitalization classes. The
+                        default text transform in Bootstrap is none.
+                        <code class="text-white text-opacity-75">
+                            &lt;p class="text-lowercase"&gt;ASSIGNMENT&lt;&frasl;p&gt;<br><br>
+                            <p class="text-lowercase">ASSIGNMENT</p>
+                            &lt;p class="text-uppercase"&gt;Assignment&lt;&frasl;p&gt;<br><br>
+                            <p class="text-uppercase">Assignment</p>
+                            &lt;p class="text-capitalize"&gt;AssiGnMent Modules&lt;&frasl;p&gt;<br><br>
+                            <p class="text-capitalize">AssiGnMent Modules</p>
+                        </code>
+                    </li>
+
+                    <li><b>Font size:</b> Sizing for these utilities matches HTML’s heading elements, so as the number
+                        increases, their size decreases. The default font size for the body element in Bootstrap is
+                        16px.
+                        <code class="text-white text-opacity-75">
+                            &lt;p class="fs-1"&gt;Text&lt;&frasl;p&gt;<br><br>
+                            <p class="fs-1">Text</p>
+                            &lt;p class="fs-2"&gt;Text&lt;&frasl;p&gt;<br><br>
+                            <p class="fs-2">Text</p>
+                            &lt;p class="fs-3"&gt;Text&lt;&frasl;p&gt;<br><br>
+                            <p class="fs-3">Text</p>
+                            &lt;p class="fs-4"&gt;Text&lt;&frasl;p&gt;<br><br>
+                            <p class="fs-4">Text</p>
+                            &lt;p class="fs-5"&gt;Text&lt;&frasl;p&gt;<br><br>
+                            <p class="fs-5">Text</p>
+                            &lt;p class="fs-6"&gt;Text&lt;&frasl;p&gt;<br><br>
+                            <p class="fs-6">Text</p>
+                        </code>
+                    </li>
+
+                    <li><b>Font weight and italics:</b> font-style utilities are abbreviated as .fst-* and font-weight
+                        utilities are abbreviated as .fw-*. The default font weight for headings in Bootstrap is bold.
+                        <code class="text-white text-opacity-75">
+                            &lt;p class="fw-bold"&gt;Bold&lt;&frasl;p&gt;<br><br>
+                            <p class="fw-bold">Bold</p>
+                            &lt;p class="fw-bolder"&gt;Bolder (relative to the parent element).&lt;&frasl;p&gt;<br><br>
+                            <p class="fw-bolder">Bolder (relative to the parent element).</p>
+                            &lt;p class="fw-semibold"&gt;Semibold&lt;&frasl;p&gt;<br><br>
+                            <p class="fw-semibold">Semibold</p>
+                            &lt;p class="fw-medium"&gt;Medium&lt;&frasl;p&gt;<br><br>
+                            <p class="fw-medium">Medium</p>
+                            &lt;p class="fw-normal"&gt;Normal&lt;&frasl;p&gt;<br><br>
+                            <p class="fw-normal">Normal</p>
+                            &lt;p class="fw-light"&gt;Light&lt;&frasl;p&gt;<br><br>
+                            <p class="fw-light">Light</p>
+                            &lt;p class="fw-lighter"&gt;Lighter (relative to the parent element).&lt;&frasl;p&gt;<br><br>
+                            <p class="fw-lighter">Lighter (relative to the parent element).</p>
+                            &lt;p class="fst-itlaic"&gt;Italic&lt;&frasl;p&gt;<br><br>
+                            <p class="fst-italic">Italic</p>
+                            &lt;p class="fst-normal"&gt;normal font style&lt;&frasl;p&gt;<br><br>
+                            <p class="fst-normal">normal font style</p>
+                        </code>
+                    </li>
+
+                    <li><b>Line height:</b> Change the line height with .lh-* utilities. The default line height for
+                        text in Bootstrap is 1.5.
+                        <code class="text-white text-opacity-75">
+                            &lt;p class="lh-1"&gt;Lorem30&lt;&frasl;p&gt;<br><br>
+                            <p class="lh-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta obcaecati repudiandae maiores fugit at sunt nulla voluptatem veniam culpa explicabo consectetur blanditiis ipsum, in officia possimus inventore mollitia a quibusdam.</p>
+                            &lt;p class="lh-sm"&gt;Lorem30&lt;&frasl;p&gt;<br><br>
+                            <p class="lh-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam quae eum ullam beatae rerum qui natus corporis officia. Pariatur nulla fugit libero veritatis. Est repellat at facere a esse aspernatur.</p>
+                            &lt;p class="lh-base"&gt;Lorem30&lt;&frasl;p&gt;<br><br>
+                            <p class="lh-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus nesciunt, voluptas odio, sequi molestiae sint provident, dolores assumenda error quod deserunt! Non necessitatibus magnam nesciunt, harum dolore fugit? Nihil, possimus!</p>
+                            &lt;p class="lh-lg"&gt;Lorem30&lt;&frasl;p&gt;<br><br>
+                            <p class="lh-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, numquam nobis blanditiis hic impedit voluptate modi nisi placeat, consequuntur labore voluptates porro, non officiis nostrum sunt sapiente dolorum autem molestiae!</p>
+                        </code>
+                    </li>
+
+                    <li><b>Reset color:</b> Reset a text or link’s color with .text-reset, so that it inherits the color
+                        from its parent. The default text color in Bootstrap is black (#000).
+                        <code class="text-white text-opacity-75">
+                            &lt;p class="text-primary"&gt;<br>
+                            &nbsp;Click here for more &lt;a href="#" class="text-reset"&gt;information&lt;&frasl;a&gt;<br>
+                            &lt;&frasl;p&gt;<br><br>
+                            <p class="text-primary">
+                                Click here for more <a href="#" class="text-reset">information</a>.
+                            </p>
+                        </code>
+                    </li>
+
+                    <li><b>Text decoration:</b> Decorate text in components with text decoration classes. The default
+                        text decoration in Bootstrap is none.
+                        <code class="text-white text-opacity-75">
+                            &lt;p class="text-decoration-underline"&gt;line underneath it.&lt;&frasl;p&gt;<br><br>
+                            <p class="text-decoration-underline">line underneath it.</p>
+                            &lt;p class="text-decoration-line-through"&gt;line going through it.&lt;&frasl;p&gt;<br><br>
+                            <p class="text-decoration-line-through">line going through it.</p>
+                            &lt;a href="#" class="text-decoration-none"&gt;link text decodration removed&lt;&frasl;p&gt;<br><br>
+                            <a href="#" class="text-decoration-none">link text decoration removed</a>
+                        </code>
+                    </li>
+                </ol>
+            </article>
+        </section>
+
+        <!-- Q-4 What do you know about the Bootstrap Grid System? -->
+
+        <section class="main-section" id="Grid">
+            <header>Grid</header>
+            <article>
+                <p>Bootstrap grid is a powerful system for building mobile-first layouts. It's very extensive tool with
+                    a great number of options.</p>
+                <p>Bootstrap’s grid system uses a series of containers, rows, and columns to arrange and align content.
+                    It’s built with flexbox and is fully responsive.</p>
+            </article>
+            <code class="text-white text-opacity-75">
+                &lt;div class="container"&gt;<br>
+                &nbsp;&nbsp;&lt;div class="row"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md bg-primary"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One of three columns <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md bg-success"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One of three columns <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md bg-warning"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One of three columns <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                &nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                &lt;&frasl;div&gt;<br><br>
+
+                <div class="container">
+                    <div class="row">
+                      <div class="col-md bg-primary">
+                        One of three columns
+                      </div>
+                      <div class="col-md bg-success">
+                        One of three columns
+                      </div>
+                      <div class="col-md bg-warning">
+                        One of three columns
+                      </div>
+                    </div>
+                  </div>                  
+            </code>
+            <p>The above bootstrap grid example creates three equal-width columns across all devices and viewports using
+                our predefined grid classes. Those columns are centered in the page with the parent .container.</p>
+            <p>Taking it step by step:</p>
+            <ol>
+                <li><b>Container:</b> Bootstrap requires a containing element to wrap site contents and house our grid
+                    system. Without a container, the grid won't work properly.
+                </li>
+                <li><b>Row:</b> Rows create horizontal groups of columns. Therefore, if you want to split your layout
+                    horizontally, use .row.
+                </li>
+                <li><b>Columns:</b> Bootstrap's grid system allows up to 12 columns across the page. <br> We use
+                    .col-md-* to create a column, where * specifies the number of columns between 1 and 12. <br> md
+                    specifies the breakpoint where the columns change its width. <br> md means "screen ≥768px", so in
+                    the example the columns will stretch to 100% of the width on the screens smaller or equal 768px.
+                </li>
+            </ol>
+        </section>
+
+        <!-- Q-5 What is the difference between Bootstrap 4 and Bootstrap 5 -->
+
+        <section class="main-section" id="Bootstrap_4_vs_Bootstrap_5">
+            <header>Bootstrap 4 vs Bootstrap 5</header>
+            <article>
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Bootstrap 4</th>
+                                <th scope="col">Bootstrap 5</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-secondary">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>The Bootstrap 4 form has jquery.</td>
+                                <td>The jquery is not utilized in Bootstrap 5.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Bootstrap 4 has less collection of colors.</td>
+                                <td>Has vibrant and more colors available.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Browsers restrictions.</td>
+                                <td>Bootstrap 5 improved the browser restriction.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>It has 5 tier grid system.</td>
+                                <td>It has 6 tier grid system.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>The APIs cannot be customized.</td>
+                                <td>Allows modifying APIs or develop own API.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>The positioning feature is absent.</td>
+                                <td>Columns can be positioned.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Less CSS usability.</td>
+                                <td>More CSS properties also customized properties.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>Uses default form development tools.</td>
+                                <td>Better development of forms.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td>There is no offcanvas component.</td>
+                                <td>The offcanvas component is added.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10</th>
+                                <td>Does not support RTL(right to left) switching in languages.</td>
+                                <td>It supports RTL(right to left) switching in languages.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">11</th>
+                                <td>No themes customization.</td>
+                                <td>Provides theme customization.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12</th>
+                                <td>Small icon collection.</td>
+                                <td>Large icon collection.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <code class="text-white text-opacity-75">
+                    &lt;div class="table-responsive"&gt;<br>
+                    &nbsp;&nbsp;&lt;table class="table text-center"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead class="table-dark"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;&lt;&frasl;th&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Bootstrap 4&lt;&frasl;th&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Bootstrap 5&lt;&frasl;th&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;thead&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody class="table-secondary"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="row"&gt;1&lt;&frasl;th&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;The Bootstrap 4 form has jquery.&lt;&frasl;td&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;The jquery is not utilized in Bootstrap 5.&lt;&frasl;td&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;tr&gt;<br>
+                    ------------------------ <br>
+                    ------------------------ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;tbody&gt;<br>
+                    &nbsp;&nbsp;&lt;&frasl;table&gt;<br>
+                    &lt;&frasl;div&gt;<br>
+
+                </code>
+            </article>
+        </section>
+
+        <!-- Q-6	What is a Button Group, and what is the class for a basic Button Group? -->
+
+        <section class="main-section" id="Button_Group">
+            <header>Button Group</header>
+            <article>
+                <p>Group a series of buttons together on a single line or stack them in a vertical column.</p>
+                <p><b>Basic Button Group Example:</b></p>
+                <code class="text-white text-opacity-75">
+                    &lt;div class="btn-group" role="group" aria-label="Basic example"&gt;<br>
+                    &nbsp;&nbsp;&lt;button type="button" class="btn btn-success"&gt;Start&lt;&frasl;button&gt;<br>
+                    &nbsp;&nbsp;&lt;button type="button" class="btn btn-success"&gt;Center&lt;&frasl;button&gt;<br>
+                    &nbsp;&nbsp;&lt;button type="button" class="btn btn-success"&gt;End&lt;&frasl;button&gt;<br>
+                    &lt;&frasl;div&gt;<br><br>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success">Start</button>
+                        <button type="button" class="btn btn-success">Center</button>
+                        <button type="button" class="btn btn-success">End</button>
+                    </div><br><br>
+                    <p>Button groups require an appropriate role attribute and explicit label to ensure assistive
+                        technologies like screen readers identify buttons as grouped and announce them. Use role="group" for
+                        button groups or role="toolbar" for button toolbars. Then use aria-label or aria-labelledby to label
+                        them.</p>
+                    <p>These classes can also be added to groups of links, as an alternative to the .nav navigation components.</p>
+                    &lt;div class="btn-group"&gt;<br>
+                    &nbsp;&nbsp;&lt;a href="#" class="btn btn-primary"&gt;Click here&lt;&frasl;a&gt;<br>
+                    &nbsp;&nbsp;&lt;a href="#" class="btn btn-primary active" aria-current="page&gt;Click this active link&lt;&frasl;a&gt;<br>
+                    &nbsp;&nbsp;&lt;a href="#" class="btn btn-primary"&gt;Click here&lt;&frasl;a&gt;<br>
+                    &lt;&frasl;div&gt;<br><br>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary" >Click here</a>
+                        <a href="#" class="btn btn-primary active" aria-current="page">Click this active link</a>
+                        <a href="#" class="btn btn-primary">Click here</a>
+                    </div><br>
+                </code>
+            </article>
+        </section>
+
+        <!-- Q-7 How can you use Bootstrap to make thumbnails? -->
+
+        <section class="main-section" id="Thumbnails">
+            <header>Thumbnails</header>
+            <article>
+                <p>Bootstrap's thumbnails are used to show linked images in grids with very minimum required markup, a
+                    thumbnail is created using <strong>class .thumbnail</strong> within the element <a>, The column
+                        grids are created using class .col-sm-* and .col-md-*, it is used to create grids of the images.
+                </p>
+                <code class="text-white text-opacity-75">
+
+                    <!-- For Apple -->
+                    
+                    &lt;div class="row"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="col-4"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="thumbnail"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="apple.jpg" style="height:185px;"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="caption"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&lt;Apple fruit&lt;&frasl;h3&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Delicious and crunchy apple fruit is one of the popular fruits containing an impressive list of antioxidants and essential nutrients required for good health&lt;&frasl;p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;a href="#" class="btn btn-success"&gt;Open&lt;&frasl;a&gt;&lt;&frasl;p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+
+                    <!-- For Guava -->
+
+                    &nbsp;&nbsp;&lt;div class="col-4"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="thumbnail"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="guava.jpg" style="height:185px;"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="caption"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&lt;Guava fruit&lt;&frasl;h3&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Guavas are common tropical fruits cultivated and enjoyed in many tropical and subtropical regions. Psidium guajava  is a small tree in the Myrtle family&lt;&frasl;p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;a href="#" class="btn btn-warning"&gt;Close&lt;&frasl;a&gt;&lt;&frasl;p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+
+                    <!-- For Mango -->
+
+                    &nbsp;&nbsp;&lt;div class="col-4"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="thumbnail"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="mango.jpg" style="height:185px;"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="caption"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&lt;Mango fruit&lt;&frasl;h3&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Mango(National fruit) fruit is one of the most popular, nutritionally rich tropical fruits with unique flavor, fragrance, taste, and heath promoting qualities&lt;&frasl;p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;a href="#" class="btn btn-danger"&gt;Click&lt;&frasl;a&gt;&lt;&frasl;p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                    &lt;&frasl;div&gt;<br>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="thumbnail">
+                                <img src="https://img.freepik.com/free-photo/red-apple-with-green-leaf-white-background_1232-3290.jpg?2&w=996&t=st=1688395450~exp=1688396050~hmac=a6d2e3eff948ab613115059ea04784c8a1fcb2ad9d41bea95fcdb2f40a398108" style="height:185px;">
+                            </div>
+                            <div class="caption">
+                                <h3> Apple fruit</h3>
+                                <p>Delicious and crunchy apple fruit is one of the popular fruits containing an impressive list of antioxidants and essential nutrients required for good health</p>
+                                <p><a href="#" class="btn btn-success">Open</a></p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="thumbnail">
+                                <img src="https://img.freepik.com/free-photo/fresh-fruit-with-green-leaf_1205-92.jpg?1&w=996&t=st=1688395684~exp=1688396284~hmac=7042294c1502397a155a4dc942d8edadd33472d968dcd4534aa50896a7073345" style="height:185px;">
+                            </div>
+                            <div class="caption">
+                                <h3>Guava fruit</h3>
+                                <p>Guavas are common tropical fruits cultivated and enjoyed in many tropical and subtropical regions. Psidium guajava  is a small tree in the Myrtle family</p>
+                                <p><a href="#" class="btn btn-warning">Close</a></p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="thumbnail">
+                                <img src="https://img.freepik.com/free-vector/vector-ripe-yellow-orange-red-whole-sliced-mango-cubes-with-leaf-isolated-white-background_1284-45465.jpg?w=826&t=st=1688395961~exp=1688396561~hmac=11f1a711ae1f73897348f717ed7351870f346c026187462a511cf95b46c7815f" style="height:185px;" id="mango">
+                            </div>
+                            <div class="caption">
+                                <h3>Mango fruit</h3>
+                                <p>Mango(National fruit) fruit is one of the most popular, nutritionally rich tropical fruits with unique flavor, fragrance, taste, and heath promoting qualities</p>
+                                <p><a href="#" class="btn btn-danger">Click</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </code>
+            </article>
+        </section>
+
+        <!-- Q-8 In Bootstrap 4, what is flexbox? -->
+
+        <section class="main-section" id="Flexbox">
+            <header>Flexbox</header>
+            <article>
+                <p>In order to use the flex utilies we need to have a flex container. This is an element with the class
+                    <strong>.d-flex or .d-inline-flex.</strong> We can place a flex container anywhere in the page
+                    where you want to align items in a specific way. We can even have it inside another container, or
+                    .col, or .card, etc.
+                </p>
+                <p>All the elements inside this container will be turned into Bootstrap 4 flex items. </p>
+                <p>Creating a Bootstrap 4 flex container with <strong>.d-flex</strong> will result in an element that
+                    takes up the whole width of its parent. And creating a Bootstrap 4 flex container with
+                    <strong>.d-inline-flex</strong> will make its width vary depending on the width of its content.
+                    .d-inline-flex will only take up the space it is necessary to display its content.
+                </p>
+
+                <code class="text-white text-opacity-75">
+                    &lt;div class="container mt-3"&gt;<br>
+                    &nbsp;&nbsp;&lt;h1 style="color:white; text-align:center;"&gt;With .d-flex&lt;&frasl;h1&gt;<br>
+                    &nbsp;&nbsp;&lt;h2 style="text-align:center;"&gt;D-Flex&lt;&frasl;h2&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="d-flex bg-dark p-3 text-primary"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="p-2 bg-primary-subtle"&gt;Flexbox 1&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="p-2 bg-warning-subtle"&gt;Flexbox 2&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="p-2 bg-danger-subtle"&gt;Flexbox 3&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                    &lt;&frasl;div&gt;         
+
+                    <div class="container mt-3">
+                        <h1 style="color:white; text-align:center;">
+                            With .d-flex
+                        </h1>
+                        <h2 style="text-align:center;">D-Flex</h2>
+                        <div class="d-flex bg-dark p-3 text-primary">
+                            <div class="p-2 bg-primary-subtle">Flexbox 1</div>
+                            <div class="p-2 bg-warning-subtle">Flexbox 2</div>
+                            <div class="p-2 bg-danger-subtle">Flexbox 3</div>
+                        </div>
+                    </div><br>
+
+                    &lt;div class="container mt-3"&gt;<br>
+                    &nbsp;&nbsp;&lt;h1 style="color:white; text-align:center;"&gt;With .d-inline-flex&lt;&frasl;h1&gt;<br>
+                    &nbsp;&nbsp;&lt;h2 style="text-align:center;"&gt;D-Inline-Flex&lt;&frasl;h2&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="d-inline-flex bg-dark p-3 text-primary"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="p-2 bg-primary-subtle"&gt;Flexbox 1&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="p-2 bg-warning-subtle"&gt;Flexbox 2&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="p-2 bg-danger-subtle"&gt;Flexbox 3&lt;&frasl;div&gt;<br>
+                    &nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                    &lt;&frasl;div&gt;    
+
+
+                    <div class="container mt-3">
+                        <h1 style="color:white; text-align:center;">
+                            With .d-inline-flex
+                        </h1>
+                        <h2 style="text-align:center;">D-Inline-Flex</h2>
+                        <div class="d-inline-flex bg-dark p-3 text-primary">
+                            <div class="p-2 bg-primary-subtle">Flexbox 1</div>
+                            <div class="p-2 bg-warning-subtle">Flexbox 2</div>
+                            <div class="p-2 bg-danger-subtle">Flexbox 3</div>
+                        </div>
+                    </div>
+                </code>
+            </article>
+        </section>
+
+        <!-- Q-9 How can one create an alert in Bootstrap? -->
+
+        <section class="main-section" id="Alert">
+            <header>Alert</header>
+            <article>
+                <p>Bootstrap Alerts are used to provide an easy way to create predefined alert messages. Alert adds a
+                    style to your messages to make it more appealing to the users.</p>
+                <p>There are eight classes that are used within <strong>div</strong> element for alerts.</p>
+                <ul>
+                    <li>.alert-success</li>
+                    <li>.alert-info</li>
+                    <li>.alert-warning</li>
+                    <li>.alert-danger</li>
+                    <li>.alert-primary</li>
+                    <li>.alert-secondary</li>
+                    <li>.alert-light</li>
+                    <li>.alert-dark</li>
+                </ul>
+
+                <code class="text-white text-opacity-75">
+                    &lt;div class="alert alert-success" role="alert"&gt;Success Alert!!!&lt;&frasl;div&gt;<br><br>
+                    <div class="alert alert-success" role="alert">
+                        Success Alert!!!
+                    </div>
+
+                    &lt;div class="alert alert-info" role="alert"&gt;Info Alert!!!&lt;&frasl;div&gt;<br><br>
+                    <div class="alert alert-info" role="alert">
+                        Info Alert!!!
+                    </div>
+
+                    &lt;div class="alert alert-warning" role="alert"&gt;Warning Alert!!!&lt;&frasl;div&gt;<br><br>
+                    <div class="alert alert-warning" role="alert">
+                        Warning Alert!!!
+                    </div>
+
+                    &lt;div class="alert alert-danger" role="alert"&gt;Danger Alert!!!&lt;&frasl;div&gt;<br><br>
+                    <div class="alert alert-danger" role="alert">
+                        Danger Alert!!!
+                    </div>
+
+                    &lt;div class="alert alert-primary" role="alert"&gt;Primary Alert!!!&lt;&frasl;div&gt;<br><br>
+                    <div class="alert alert-primary" role="alert">
+                        Primary Alert!!!
+                    </div>
+
+                    &lt;div class="alert alert-secondary" role="alert"&gt;Secondary Alert!!!&lt;&frasl;div&gt;<br><br>
+                    <div class="alert alert-secondary" role="alert">
+                        Secondary Alert!!!
+                    </div>
+
+                    &lt;div class="alert alert-light" role="alert"&gt;Light Alert!!!&lt;&frasl;div&gt;<br><br>
+                    <div class="alert alert-light" role="alert">
+                        Light Alert!!!
+                    </div>
+
+                    &lt;div class="alert alert-dark" role="alert"&gt;Dark Alert!!!&lt;&frasl;div&gt;<br><br>
+                    <div class="alert alert-dark" role="alert">
+                        Dark Alert!!!
+                    </div>
+                </code>
+            </article>
+        </section>
+
+        <!-- Q-10 What is a bootstrap card and how would you create one? -->
+
+        <section class="main-section" id="Card">
+            <header>Card</header>
+            <article>
+                <p>Bootstrap card is a flexible and extensible content container. It includes options for headers and
+                    footers, a wide variety of content, contextual background colors, and powerful display options. Card
+                    replaces panel, well, and thumbnail components in old Bootstrap 3 version.</p>
+                <h5>Creating a Basic Card</h5>
+                <p>The card markup is pretty straight forward. The outer wrapper require the base class .card, whereas
+                    content can be placed inside the .card-body element.</p>
+
+                <code class="text-white text-opacity-75 d-inline-flex align-items-center">
+                    <!-- Profile Card -->
+                    &lt;div class="card bg-dark" style="width: 600px;"&gt;<br>
+                    &nbsp;&nbsp;&lt;img src="img.jpg" class="card-img-top" alt="profile-pic"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="card-body text-center bg-dark"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5 class="card-title text-white-50"&gt;Jason Galbraith&lt;&frasl;h5&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="card-text text-white"&gt;Jason is a freelance full stack developer based in Toronto. He is specialized in HTML5, CSS3, JavaScript, Bootstrap, Java, C, C++, etc.&lt;&frasl;p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" class="btn btn-primary"&gt;View Profile&lt;&frasl;a&gt;<br>
+                    &nbsp;&nbsp;&lt;&frasl;div&gt;<br>
+                    &lt;&frasl;div&gt;
+
+                    <div class="card bg-dark" style="width: 600px;"> 
+                        <img src="https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?w=740&t=st=1688409445~exp=1688410045~hmac=f6d8682c138738156c37c0e75b47090bbe39c96c866fdad4798b149f82e30e55" class="card-img-top" alt="profile-pic"> 
+                        <div class="card-body text-center bg-dark"> 
+                            <h5 class="card-title text-white-50">Jason Galbraith</h5> 
+                            <p class="card-text text-white">Jason is a freelance full stack developer based in Toronto. He is specialized in HTML5, CSS3, JavaScript, Bootstrap, Java, C, C++, etc.</p> 
+                            <a href="#" class="btn btn-primary">View Profile</a> 
+                        </div> 
+                    </div>                        
+                </code>
+            </article>
+        </section>
+
+        <!-- Reference is taken from -->
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <ul>
+                <li>All the documentation in this page is taken from <a
+                        href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                        target="_blank">Bootstrap</a></li>
+            </ul>
+        </section>
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
